@@ -1,0 +1,155 @@
+html, body {
+    height: 100%;
+    width: 100%;
+    font-family: 'Open Sans', sans-serif;
+    color: #333;
+}
+
+body {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+}
+
+main {
+    flex: 1 0 auto;
+}
+
+.logo h3 {
+    font-weight: bold;
+}
+
+a {
+    transition: color .5s;
+}
+
+a:hover {
+    color: #333;
+}
+
+nav ul a {
+    color: #eee;
+    transition: color .5s;
+    padding: 0 8px;
+}
+
+nav ul a:hover {
+    background-color: inherit;
+    color: #64B5F6;
+}
+
+.brand-logo {
+    font-family: "Raleway", sans-serif;
+    font-weight: bold;
+}
+
+.page-footer .footer-copyright {
+    padding-top: 0;
+    color: #fff;
+}
+
+.logo {
+    margin-top: 5%;
+    margin-bottom: 5%;
+}
+
+.self {
+    display: block;
+    margin: auto;
+}
+
+/* Timeline 
+ * https://codepen.io/piitaya/pen/vLappz
+ */
+
+.timeline {
+    position: relative;
+}
+
+.timeline .timeline-event {
+    position: relative;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+.timeline .timeline-event .timeline-content {
+    position: relative;
+    width: calc(50% - 50px);
+}
+
+.timeline .timeline-event::before {
+    display: block;
+    content: "";
+    width: 2px;
+    height: calc(50% - 30px);
+    position: absolute;
+    background: #d2d2d2;
+    left: calc(50% - 1px);
+    top: 0;
+}
+
+.timeline .timeline-event::after {
+    display: block;
+    content: "";
+    width: 2px;
+    height: calc(50% - 30px);
+    position: absolute;
+    background: #d2d2d2;
+    left: calc(50% - 1px);
+    top: calc(50% + 30px);
+}
+
+.timeline .timeline-event:first-child::before {
+    display: none;
+}
+
+.timeline .timeline-event:last-child::after {
+    display: none;
+}
+
+.timeline .timeline-event:nth-child(even) .timeline-content {
+    margin-left: calc(50% + 50px);
+}
+
+.timeline .timeline-event:nth-child(odd) .timeline-content {
+    margin-left: 0;
+}
+
+.timeline .timeline-badge {
+    display: block;
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    background: #d2d2d2;
+    top: calc(50% - 20px);
+    right: calc(50% - 20px);
+    border-radius: 50%;
+    text-align: center;
+    cursor: default;
+}
+
+.timeline .timeline-badge i {
+    font-size: 25px;
+    line-height: 40px;
+}
+
+@media (max-width: 600px) {
+    .timeline .timeline-event .timeline-content {
+    width: calc(100% - 70px);
+    }
+    .timeline .timeline-event::before {
+    left: 19px;
+    }
+    .timeline .timeline-event::after {
+    left: 19px;
+    }
+    .timeline .timeline-event:nth-child(even) .timeline-content {
+    margin-left: 70px;
+    }
+    .timeline .timeline-event:nth-child(odd) .timeline-content {
+    margin-left: 70px;
+    }
+    .timeline .timeline-badge {
+    left: 0;
+    }
+}
